@@ -57,12 +57,12 @@ export default function Hero(){
 
                 <div className="relative flex justify-center !overflow-visible">
                     <div className="relative w-full max-w-lg aspect-square !overflow-visible">
-                        <img alt="Mascote Mamãe Coruja" className="w-full h-full object-contain drop-shadow-2xl animate-[float_4s_ease-in-out_infinite] !overflow-visible" src="/src/assets/owl_hero.png"/>
+                        <img alt="Mascote Mamãe Coruja" className="w-full h-full object-contain drop-shadow-2xl animate-[float_4s_ease-in-out_infinite] !overflow-visible" src="src/assets/owl_hero.png"/>
 
                         <div className="absolute top-20 right-0 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/50">
                             <div className="flex items-center gap-3">
                                 <div className="bg-orange-100 p-2 rounded-lg text-orange-600 font-bold">
-                                    <img alt="Ícone de doação" className="w-4 h-4" src="/src/assets/gift.png"/>
+                                    <img alt="Ícone de doação" className="w-4 h-4" src="src/assets/gift.png"/>
                                 </div>
                                 
                                 <div>
@@ -80,7 +80,7 @@ export default function Hero(){
                         <div className="absolute bottom-20 left-0 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/50">
                             <div className="flex items-center gap-3">
                                 <div className="bg-pink-100 p-2 rounded-lg text-pink-600 font-bold">
-                                    <img alt="Ícone de pessoas atendidas" className="w-4 h-4" src="/src/assets/family.png"/>
+                                    <img alt="Ícone de pessoas atendidas" className="w-4 h-4" src="src/assets/family.png"/>
                                 </div>
                                 
                                 <div>
@@ -128,10 +128,7 @@ export default function Hero(){
 
                     <div className="bg-gray-100 rounded-xl p-6 flex flex-col items-center mb-6">
 
-                        <img
-                        src="src/assets/donation/qrcode_premium.png"
-                        className="w-32 mb-4"
-                        />
+                        <img alt="QR Code Premium" src="src/assets/donation/qrcode_premium.png" className="w-32 mb-4"/>
 
                         <span className="text-xs tracking-widest text-gray-500">
                             DOE VIA PIX AGORA MESMO

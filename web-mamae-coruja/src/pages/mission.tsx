@@ -49,7 +49,7 @@ export function Mission() {
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video md:aspect-square">
                                 <img
                                 alt="Nossa Missão - Ação"
-                                src="src/assets/img-mission.jpg"
+                                src="src/assets/mission.jpg"
                                 className="w-full h-full object-cover"
                                 />
                             </div>
