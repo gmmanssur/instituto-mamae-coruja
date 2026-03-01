@@ -29,7 +29,7 @@ export default function Hero(){
             return
         }
 
-        const phone = "5511999999999"
+        const phone = "5511983829301"
 
         const message =
     `Olá! Vim pelo site do Instituto Mamãe Coruja.
