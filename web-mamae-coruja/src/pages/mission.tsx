@@ -1,3 +1,5 @@
+import foto from "../assets/mission.jpg"
+
 export function Mission() {
     return(
         <section className="py-24 bg-rose-50/50">
@@ -49,7 +51,7 @@ export function Mission() {
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video md:aspect-square">
                                 <img
                                 alt="Nossa Missão - Ação"
-                                src="src/assets/mission.jpg"
+                                src={foto}
                                 className="w-full h-full object-cover"
                                 />
                             </div>

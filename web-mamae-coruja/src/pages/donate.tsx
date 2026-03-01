@@ -1,6 +1,9 @@
 import { useState } from "react";
 import DonationModal from "../modal/donationModal";
 import { donationPlans } from "../services/donationData";
+import owlBaby from "../assets/baby-solo.png";
+import owlSolo from "../assets/owl-solo.png";
+import owl from "../assets/owl.png";
 
 export function Donate() {
   const [selected, setSelected] = useState<any>(null);
@@ -27,7 +30,7 @@ export function Donate() {
             className="relative bg-white rounded-3xl p-6 shadow-xl border-2 border-transparent flex flex-col items-center hover:-translate-y-2 transition"
           >
             <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-4 p-2">
-              <img src="src/assets/baby-solo.png" className="w-full h-full object-contain" />
+              <img src={owlBaby} className="w-full h-full object-contain" />
             </div>
 
             <h3 className="text-lg font-bold mb-1">Doação Baby</h3>
@@ -52,7 +55,7 @@ export function Donate() {
             </div>
 
             <div className="w-20 h-20 bg-purple-50 rounded-full flex items-center justify-center mb-4 p-2">
-              <img src="src/assets/owl-solo.png" className="w-full h-full object-contain" />
+              <img src={owlSolo} className="w-full h-full object-contain" />
             </div>
 
             <h3 className="text-lg font-bold mb-1">Doação Premium</h3>
@@ -73,7 +76,7 @@ export function Donate() {
             className="relative bg-white rounded-3xl p-6 shadow-xl border-2 border-transparent flex flex-col items-center hover:-translate-y-2 transition"
           >
             <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mb-4 p-2">
-              <img src="src/assets/owl.png" className="w-full h-full object-contain" />
+              <img src={owl} className="w-full h-full object-contain" />
             </div>
 
             <h3 className="text-lg font-bold mb-1">Doação VIP</h3>

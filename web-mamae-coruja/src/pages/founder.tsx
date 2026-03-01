@@ -1,3 +1,5 @@
+import foto from "../assets/img-founder.jpg"
+
 export function Founder(){
     return(
         <section
@@ -17,7 +19,7 @@ export function Founder(){
                 <div className="grid lg:grid-cols-12 gap-8 md:gap-12 items-center">
                     <div className="lg:col-span-5 lg:col-start-1 relative px-4 sm:px-0">
                         <img
-                        src="src/assets/img-founder.jpg"
+                        src={foto}
                         alt="Samara - Fundadora"
                         className="w-full h-[60vh] object-contain mx-auto drop-shadow-2xl rounded-[2rem]"
                         style={{ opacity: 1, transform: "none" }}
