@@ -8,7 +8,7 @@ import qrCodePremium from "../assets/donation/qrcode_premium.png"
 export default function Hero(){
     const [open,setOpen] = useState(false)
     const [copied, setCopied] = useState(false)
-    const pixKey = "instituto.mamaecoruja@yahoo.com.br"
+    const pixKey = "instituto.mamaecoruja@yahoo.com"
     const [name, setName] = useState("")
     const [interest, setInterest] = useState("Voluntariado")
     const [error,setError] = useState("")
