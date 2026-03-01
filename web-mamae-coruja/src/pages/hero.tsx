@@ -9,6 +9,9 @@ export default function Hero(){
     const [open,setOpen] = useState(false)
     const [copied, setCopied] = useState(false)
     const pixKey = "instituto.mamaecoruja@yahoo.com.br"
+    const [name, setName] = useState("")
+    const [interest, setInterest] = useState("Voluntariado")
+    const [error,setError] = useState("")
 
     async function copyPix() {
         await navigator.clipboard.writeText(pixKey);
@@ -17,6 +20,26 @@ export default function Hero(){
         setTimeout(() => {
             setCopied(false);
         }, 2000);
+    }
+
+    function sendToWhatsapp() {
+
+        if(!name){
+            setError("Preencha com seu nome para continuar.")
+            return
+        }
+
+        const phone = "5511999999999"
+
+        const message =
+    `Olá! Vim pelo site do Instituto Mamãe Coruja.
+
+    Nome: ${name}
+    Interesse: ${interest}`
+
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
+
+        window.open(url, "_blank")
     }
     
     return(
@@ -177,18 +200,10 @@ export default function Hero(){
                                 Nome Completo
                             </label>
                             <input
+                            value={name}
+                            onChange={(e)=>setName(e.target.value)}
                             className="w-full mt-1 h-12 px-4 rounded-xl border focus:ring-2 focus:ring-pink-400 outline-none"
                             placeholder="Seu nome"
-                            />
-                        </div>
-
-                        <div className="text-left">
-                            <label className="text-sm font-medium text-gray-700">
-                                E-mail
-                            </label>
-                            <input
-                            className="w-full mt-1 h-12 px-4 rounded-xl border focus:ring-2 focus:ring-pink-400 outline-none"
-                            placeholder="seu@email.com"
                             />
                         </div>
 
@@ -198,6 +213,8 @@ export default function Hero(){
                             </label>
 
                             <select
+                            value={interest}
+                            onChange={(e)=>setInterest(e.target.value)}
                             className="w-full mt-1 h-12 px-4 rounded-xl border focus:ring-2 focus:ring-pink-400 outline-none">
                                 <option>Voluntariado</option>
                                 <option>Doações</option>
@@ -205,9 +222,16 @@ export default function Hero(){
                             </select>
                         </div>
 
-                        <button className="w-full h-14 rounded-xl bg-gradient-to-r from-pink-500 to-pink-600 text-white font-semibold text-lg shadow-lg hover:scale-[1.02] transition">
+                        <button
+                        onClick={sendToWhatsapp}
+                        className="w-full h-14 rounded-xl bg-gradient-to-r from-pink-500 to-pink-600 text-white font-semibold 
+                        text-lg shadow-lg hover:scale-[1.02] transition cursor-pointer">
                             Enviar
                         </button>
+
+                        {error && (
+                            <p className="text-red-500 text-sm">{error}</p>
+                        )}
                     </div>
                 </div>
             </div>
