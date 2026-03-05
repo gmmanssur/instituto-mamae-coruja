@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "../assets/owl_hero.png"
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -39,19 +40,14 @@ export function Navbar() {
   return (
     <div
       ref={navbarRef}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 py-4
-      ${
-        scrolled
-          ? "bg-white/80 backdrop-blur-2xl shadow-md"
-          : ""
-      }`}
+      className="fixed top-0 w-full z-50 transition-all duration-300 py-4 bg-[#5d9a94] text-white"
     >
       <div className="container mx-auto px-5 flex justify-between items-center">
         
         <a href="#home" className="flex items-center gap-2">
+          <img alt="Logo do Instituto Mamãe Coruja" src={logo} className="w-10 h-10" />
           <span
-            className={`font-heading font-bold text-xl transition-colors
-            ${scrolled ? "text-[#8200db]" : "text-white"}`}
+            className="font-heading font-bold text-xl transition-colors text-white block md:hidden lg:block"
           >
             Instituto Mamãe Coruja
           </span>
@@ -60,63 +56,56 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-7">
           <a
             href="#home"
-            className={`font-medium text-sm transition-colors
-            ${scrolled ? "text-black hover:text-[#8200db]" : "text-white/90 hover:text-[#EB4799]"}`}
+            className="font-medium text-sm transition-colors"
           >
             Início
           </a>
 
           <a
             href="#about"
-            className={`font-medium text-sm transition-colors
-            ${scrolled ? "text-black hover:text-[#8200db]" : "text-white/90 hover:text-[#EB4799]"}`}
+            className="font-medium text-sm transition-colors"
           >
             Sobre Nós
           </a>
 
           <a
             href="#founder"
-            className={`font-medium text-sm transition-colors
-            ${scrolled ? "text-black hover:text-[#8200db]" : "text-white/90 hover:text-[#EB4799]"}`}
+            className="font-medium text-sm transition-colors"
           >
             Fundadora
           </a>
 
           <a
             href="#donation"
-            className={`font-medium text-sm transition-colors
-            ${scrolled ? "text-black hover:text-[#8200db]" : "text-white/90 hover:text-[#EB4799]"}`}
+            className="font-medium text-sm transition-colors"
           >
             Doação
           </a>
 
           <a
             href="#gallery"
-            className={`font-medium text-sm transition-colors
-            ${scrolled ? "text-black hover:text-[#8200db]" : "text-white/90 hover:text-[#EB4799]"}`}
+            className="font-medium text-sm transition-colors"
           >
             Galeria
           </a>
 
           <a
             href="#volunteer"
-            className={`font-medium text-sm transition-colors
-            ${scrolled ? "text-black hover:text-[#8200db]" : "text-white/90 hover:text-[#EB4799]"}`}
+            className="font-medium text-sm transition-colors"
           >
             Voluntários
           </a>
 
           <a
             href="#donation"
-            className="bg-[#EB4799] hover:bg-white hover:text-[#EB4799] text-white rounded-full px-6 py-2 text-sm shadow-lg transition-all"
+            className="bg-[#a9dfcb] hover:bg-white hover:text-[#a9dfcb] text-white rounded-full px-6 py-2 text-sm shadow-lg transition-all"
           >
             Apoiar Agora
           </a>
         </div>
 
         <button
-          className={`md:hidden transition-transform duration-300
-          ${scrolled ? "text-black" : "text-white"}`}
+          className="md:hidden transition-transform duration-300"
           onClick={() => setOpen(!open)}
         >
           {open ? <X size={32} /> : <Menu size={32} />}

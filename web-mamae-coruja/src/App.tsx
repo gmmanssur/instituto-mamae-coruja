@@ -9,17 +9,20 @@ import Gallery from './pages/gallery'
 import Volunteer from './pages/volunteer'
 import Footer from './pages/footer'
 import WhatsAppWidget from './components/WhatsAppWidget'
+import bgImg from "./assets/bg-hero.jpeg";
 
 function App() {
   return (
       <main className='w-full min-h-screen'>
         <Navbar />
-        <Hero />
-        <About />
+        <div style={{backgroundImage: `url(${bgImg})`, backgroundSize: "cover", backgroundPosition: "center"}}>
+          <Hero />
+          <Gallery />
+        </div>
         <Mission />
-        <Founder />
         <Donate />
-        <Gallery />
+        <Founder />
+        <About />
         <Volunteer />
         <Footer />
         <WhatsAppWidget />

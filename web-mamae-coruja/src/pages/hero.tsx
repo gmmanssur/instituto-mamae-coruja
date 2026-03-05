@@ -4,6 +4,7 @@ import owl from "../assets/owl_hero.png"
 import familyIcon from "../assets/family.png"
 import giftIcon from "../assets/gift.png"
 import qrCodePremium from "../assets/donation/qrcode_premium.png"
+import bgImgOwl from "../assets/img-hero-title.png"
 
 export default function Hero(){
     const [open,setOpen] = useState(false)
@@ -43,39 +44,48 @@ export default function Hero(){
     }
     
     return(
-        <section id="home" className="relative min-h-screen flex items-center pt-[84px] pb-24 overflow-hidden bg-linear-to-br 
-            from-[#8200db] via-[#934ae8] to-[#EB4799]">
-
+        <section id="home" className="relative min-h-screen flex items-center pt-[84px] pb-24 overflow-hidden bg-cover ">
             <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative z-10">
-                
                 <div className="text-white space-y-6 text-left">
                     <div>
-                        <span className="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-sm font-medium mb-4 border border-white/10">
-                        Transformando o mundo com amor</span>
+                        <span className="inline-block text-[#8200db] px-4 py-1.5 rounded-full bg-[#8200db]/20 backdrop-blur-sm text-sm font-medium mb-4 border border-white/10">
+                        Juntos fortalecemos vidas</span>
 
-                        <h1 className="text-5xl md:text-7xl font-bold font-heading leading-tight text-white">
-                            Instituto <br/>
-                            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#ffae7c] via-[#ffff99] to-[#ff416c] animate-gradient-x drop-shadow-lg">
+                        <div className="flex flex-col lg:flex-row items-center gap-6 w-full">
+                            <img
+                                alt="owls"
+                                src={bgImgOwl}
+                                className="w-40 sm:w-52 md:w-64 lg:w-72 h-auto"
+                            />
+
+                            <h1 className="text-3xl sm:text-3xl md:text-4   xl lg:text-5xl font-bold font-heading leading-tight text-center lg:text-left text-[#5d9a94]">
+                                Instituto <br />
+
+                                <span className="text-[#a9dfcb] text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">
                                 Mamãe Coruja
-                            </span>
-                        </h1>
+                                </span>
+                            </h1>
+                        </div>
+                        <p className="text-lg text-[#8200db]/100 leading-relaxed text-justify">
+                            <h2 className="text-[#8200db] font-bold text-[40px] text-center sm:text-[50px] sm:text-left">Apoiando mães solo</h2>
+                            
+                            <span className="!font-bold">Bem-vindo(a)</span> ao <span className="!font-bold">Instituto Mamãe Coruja.</span> Transformamos vidas através do amor, cuidado e apoio às famílias em situação de vulnerabilidade social. 
+                            Juntos, formamos uma legião do bem e contribuímos para fortalecer a sociedade.
+                        </p>
                     </div>
 
-                    <p className="text-lg text-purple-100 max-w-xl leading-relaxed">
-                        Transformando vidas através do amor, cuidado e apoio às famílias em situação de vulnerabilidade. 
-                        Juntos, formamos uma legião do bem e contribuímos para amenizar o sofrimento da sociedade.
-                    </p>
-
-                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                        <button
-                        className="inline-flex items-center justify-center gap-2 font-medium border border-[#ec4699]-border min-h-10 bg-[#ec4699] hover:bg-[#ff416c]/90 text-white rounded-full px-8 h-14 text-lg shadow-lg hover:shadow-pink-500/25 transition-all"
-                        onClick={()=>setOpen(true)}>
-                            Participar do Projeto
-                        </button>
-                        
-                        <a href="#about" className="inline-flex items-center justify-center font-medium bg-white text-[#8200db] border-white hover:bg-gray-100 rounded-full px-8 h-14 text-lg">
-                            Saiba mais
-                        </a>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                        <div className="flex flex-col sm:flex-row gap-4 bg-[#934ae84f] rounded-full">
+                            <button
+                            className="inline-flex items-center cursor-pointer justify-center gap-2 font-medium min-h-10 bg-[#b671d4] hover:bg-[#934ae8]/90 text-white rounded-full px-8 h-14 text-lg shadow-lg hover:shadow-[#934ae8]-500/25 transition-all"
+                            onClick={()=>setOpen(true)}>
+                                Junte-se a Nós!
+                            </button>
+                            
+                            <a href="#about" className="inline-flex items-center justify-center font-medium bg-white text-[#5d9a94] border-white hover:bg-gray-100 rounded-full px-8 h-14 text-lg">
+                                Saiba mais {'>'}
+                            </a>
+                        </div>    
                     </div>
                 </div>
 
@@ -126,17 +136,6 @@ export default function Hero(){
                 </div>
             </div>
 
-            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none translate-y-1">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 1200 120"
-                    preserveAspectRatio="none"
-                    className="relative block w-[calc(100%+1.3px)] h-[60px] md:h-[100px] fill-white"
-                >
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" />
-                </svg>
-            </div>
-
             <div className={`fixed inset-0 z-50 flex items-center justify-center transition-all duration-500
             ${open ? "opacity-100 visible" : "opacity-0 invisible"}`}>
 
@@ -157,7 +156,7 @@ export default function Hero(){
                         ✕
                     </button>
 
-                    <h2 className="text-2xl font-bold text-center text-purple-700 mb-6">
+                    <h2 className="text-2xl font-bold text-center text-[#5d9a94] mb-6">
                         Faça Parte da Nossa Família
                     </h2>
 
@@ -224,7 +223,7 @@ export default function Hero(){
 
                         <button
                         onClick={sendToWhatsapp}
-                        className="w-full h-14 rounded-xl bg-gradient-to-r from-pink-500 to-pink-600 text-white font-semibold 
+                        className="w-full h-14 rounded-xl bg-[#b671d4] text-white font-semibold 
                         text-lg shadow-lg hover:scale-[1.02] transition cursor-pointer">
                             Enviar
                         </button>

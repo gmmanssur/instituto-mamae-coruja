@@ -30,7 +30,7 @@ export function GalleryCard({
           {badge}
         </span>
 
-        <h3 className="text-base sm:text-lg md:text-xl font-bold leading-tight mb-1">
+        <h3 className="text-base text-[#5d9a94] sm:text-lg md:text-xl font-bold leading-tight mb-1">
           {title}
         </h3>
 

@@ -8,10 +8,10 @@ export function Founder(){
         >
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-10 md:mb-12">
-                    <h2 className="text-4xl font-bold text-[#8a3ef4] mb-2">
+                    <h2 className="text-4xl font-bold text-[#5d9a94] mb-2">
                         Nossa Fundadora
                     </h2>
-                    <p className="text-gray-600">
+                    <p className="text-[#5d9a94]">
                         Conheça a história inspiradora por trás do Instituto Mamãe Coruja
                     </p>
                 </div>
