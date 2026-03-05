@@ -4,7 +4,6 @@ import { donationPlans } from "../services/donationData";
 import owlBaby from "../assets/baby-solo.png";
 import owlSolo from "../assets/owl-solo.png";
 import owl from "../assets/owl.png";
-import bgBall from "../assets/bg-hero.jpeg";
 
 export function Donate() {
   const [selected, setSelected] = useState<any>(null);

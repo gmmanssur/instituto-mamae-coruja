@@ -4,22 +4,7 @@ import logo from "../assets/owl_hero.png"
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const navbarRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
-
-      if (open) {
-        setOpen(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [open]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
