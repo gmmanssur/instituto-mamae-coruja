@@ -11,10 +11,10 @@ export function Donate() {
   return (
     <section
       id="donation"
-      className="py-24 bg-gradient-to-b from-[#5d9a94]/5 to-[#a9dfcb] text-center"
+      className="py-20 bg-gradient-to-b from-[#5d9a94]/5 to-[#a9dfcb] text-center"
     >
       <div className="container mx-auto px-4">
-        <div className="mb-16">
+        <div className="mb-8">
           <h2 className="text-4xl font-bold text-[#5d9a94] mb-4">
             Faça uma Doação
           </h2>
@@ -25,7 +25,7 @@ export function Donate() {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 items-stretch gap-3 sm:gap-6 max-w-5xl mx-auto mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 items-stretch gap-5 sm:gap-6 max-w-5xl mx-auto mb-10">
 
           {/* CARD 1 */}
           <div className="relative bg-white rounded-3xl p-6 shadow-xl border-2 border-transparent flex flex-col items-center h-full hover:-translate-y-2 transition">
@@ -78,7 +78,7 @@ export function Donate() {
           </div>
 
           {/* CARD 3 */}
-          <div className="relative bg-white rounded-3xl p-6 shadow-xl border-2 border-transparent flex flex-col items-center h-full hover:-translate-y-2 transition">
+          <div className="relative col-span-2 sm:col-span-1 bg-white rounded-3xl p-6 shadow-xl border-2 border-transparent flex flex-col items-center h-full hover:-translate-y-2 transition">
             
             <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mb-4 p-2">
               <img src={owl} className="w-full h-full object-contain" />

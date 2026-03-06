@@ -60,7 +60,7 @@ export default function GalleryModal({ images, title, onClose }: Props) {
 
   return (
     <div
-      className="fixed inset-0 z-[999] bg-black/80 backdrop-blur-sm flex items-center justify-center p-2 md:p-6"
+      className="fixed inset-0 z-[998] bg-black/80 backdrop-blur-sm flex items-center justify-center p-2 md:p-6"
       onClick={onClose}
     >
       <div

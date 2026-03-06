@@ -99,7 +99,7 @@ export function Navbar() {
 
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out
-        ${open ? "max-h-96 opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"}`}
+        ${open ? "max-h-96 opacity-100 translate-y-0 text-[#5d9a94]" : "max-h-0 opacity-0 -translate-y-2"}`}
       >
         <div className="flex flex-col gap-5 p-6 backdrop-blur-xl bg-white/90 shadow-xl border-t">
           <a href="#home" onClick={() => setOpen(false)}>Início</a>
@@ -112,7 +112,7 @@ export function Navbar() {
           <a
             href="#donation"
             onClick={() => setOpen(false)}
-            className="bg-[#EB4799] text-white rounded-full px-6 py-2 text-center"
+            className="bg-[#5d9a94] text-white rounded-full px-6 py-2 text-center"
           >
             Apoiar Agora
           </a>

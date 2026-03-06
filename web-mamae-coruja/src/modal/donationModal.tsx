@@ -35,7 +35,7 @@ export default function DonationModal({ open, plan, onClose }: Props) {
   return (
     <>
       <div
-        className="fixed inset-0 z-[999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
+        className="fixed inset-0 z-[998] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
         onClick={onClose}
       >
         <div
@@ -102,7 +102,7 @@ export default function DonationModal({ open, plan, onClose }: Props) {
       </div>
 
       {showToast && (
-        <div className="fixed bottom-6 z-[9999] right-6 bg-green-500 text-white px-5 py-3 rounded-xl shadow-lg animate-[fadeIn_.2s]">
+        <div className="fixed bottom-6 z-[998] right-6 bg-green-500 text-white px-5 py-3 rounded-xl shadow-lg animate-[fadeIn_.2s]">
           PIX copiado com sucesso ✅
         </div>
       )}

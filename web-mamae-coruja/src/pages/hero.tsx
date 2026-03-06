@@ -51,14 +51,14 @@ export default function Hero(){
                         <span className="inline-block text-[#8200db] px-4 py-1.5 rounded-full bg-[#8200db]/20 backdrop-blur-sm text-sm font-medium mb-4 border border-white/10">
                         Juntos fortalecemos vidas</span>
 
-                        <div className="flex flex-col lg:flex-row items-center gap-6 w-full">
+                        <div className="flex flex-row items-center gap-6 w-full">
                             <img
                                 alt="owls"
                                 src={bgImgOwl}
                                 className="w-40 sm:w-52 md:w-64 lg:w-72 h-auto"
                             />
 
-                            <h1 className="text-3xl sm:text-3xl md:text-4   xl lg:text-5xl font-bold font-heading leading-tight text-center lg:text-left text-[#5d9a94]">
+                            <h1 className="text-3xl text-left sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading leading-tight text-center lg:text-left text-[#5d9a94]">
                                 Instituto <br />
 
                                 <span className="text-[#a9dfcb] text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">
@@ -66,8 +66,8 @@ export default function Hero(){
                                 </span>
                             </h1>
                         </div>
-                        <p className="text-lg text-[#8200db]/100 leading-relaxed text-justify">
-                            <h2 className="text-[#8200db] font-bold text-[40px] text-center sm:text-[50px] sm:text-left">Apoiando mães solo</h2>
+                        <p className="text-lg text-[#8200db]/100 leading-relaxed text-justify text-[12px] sm:text-[16px] md:text-[18px] lg:text-[20px]">
+                            <h2 className="text-[#8200db] font-bold text-[30px] text-center sm:text-[50px] sm:text-left">Apoiando mães solo</h2>
                             
                             <span className="!font-bold">Bem-vindo(a)</span> ao <span className="!font-bold">Instituto Mamãe Coruja.</span> Transformamos vidas através do amor, cuidado e apoio às famílias em situação de vulnerabilidade social. 
                             Juntos, formamos uma legião do bem e contribuímos para fortalecer a sociedade.
@@ -97,7 +97,7 @@ export default function Hero(){
                         className="w-full h-full object-contain drop-shadow-2xl animate-[float_4s_ease-in-out_infinite]"
                         src={owl}/>
 
-                        <div className="absolute top-20 right-0 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/50">
+                        <div className="hidden sm:block absolute top-20 right-0 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/50">
                             <div className="flex items-center gap-3">
                                 <div className="bg-orange-100 p-2 rounded-lg">
                                     <img alt="Ícone de doação" className="w-4 h-4" src={giftIcon}/>
@@ -115,7 +115,7 @@ export default function Hero(){
                             </div>
                         </div>
                     
-                        <div className="absolute bottom-20 left-0 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/50">
+                        <div className="hidden sm:block absolute bottom-20 left-0 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/50">
                             <div className="flex items-center gap-3">
                                 <div className="bg-pink-100 p-2 rounded-lg">
                                     <img alt="Ícone de pessoas atendidas" className="w-4 h-4" src={familyIcon}/>
@@ -217,7 +217,7 @@ export default function Hero(){
                             className="w-full mt-1 h-12 px-4 rounded-xl border focus:ring-2 focus:ring-pink-400 outline-none">
                                 <option>Voluntariado</option>
                                 <option>Doações</option>
-                                <option>Eventos</option>
+                                <option>Especialista</option>
                             </select>
                         </div>
 

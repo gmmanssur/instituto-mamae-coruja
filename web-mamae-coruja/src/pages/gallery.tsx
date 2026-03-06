@@ -8,7 +8,9 @@ export function Gallery() {
 
   return (
     <section id="gallery" className="py-24 bg-pink-50/50">
+
       <div className="container mx-auto px-4">
+
         <div className="text-center mb-16 text-[#5d9a94]">
           <h2 className="text-4xl font-bold mb-4">
             Nossa Galeria
@@ -20,21 +22,23 @@ export function Gallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-          {galleryData.map((item) => (
-            <div
-              key={item.id}
-              onClick={() => setSelected(item)}
-              className="cursor-pointer last:col-span-2 md:last:col-span-1"
-            >
-              <GalleryCard
-                image={item.image}
-                badge={item.badge}
-                title={item.title}
-                description={item.description}
-              />
-            </div>
-          ))}
+        {/* CARROSSEL */}
+        <div className="flex justify-center px-4">
+          <div className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-6 max-w-5xl">
+            {galleryData.map((item) => (
+              <div
+                key={item.id}
+                onClick={() => setSelected(item)}
+                className="snap-start flex-shrink-0 w-[280px] md:w-[320px]"
+              >
+                <GalleryCard
+                  image={item.image}
+                  title={item.title}
+                  description={item.description}
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>
@@ -46,6 +50,7 @@ export function Gallery() {
           onClose={() => setSelected(null)}
         />
       )}
+
     </section>
   );
 }

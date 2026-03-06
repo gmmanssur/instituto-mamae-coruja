@@ -6,12 +6,12 @@ export function Mission() {
             <div className="container mx-auto px-4">
                 <div className="bg-white rounded-[3rem] p-8 md:p-12 shadow-xl border border-rose-100">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="space-y-6 text-left" style={{ opacity: 1, transform: "none" }}>
-                            '<h2 className="text-3xl md:text-4xl font-bold text-[#5d9a94]">
+                        <div className="text-left" style={{ opacity: 1, transform: "none" }}>
+                            <h2 className="p-2 text-3xl md:text-4xl font-bold text-[#5d9a94]">
                                 Nossa Missão
                             </h2>
 
-                            <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+                            <div className="text-gray-600 text-md leading-relaxed">
                                 <p className="text-justify">
                                 O Instituto Mamãe Coruja é uma organização sem fins lucrativos
                                 que visa apoiar{" "}
@@ -29,7 +29,7 @@ export function Mission() {
                                 </p>
                             </div>
 
-                            <div className="pt-4">
+                            <div className="pt-1">
                                 <a
                                 href="#donation"
                                 className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium
