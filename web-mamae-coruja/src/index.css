@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Polly Rounded";
+  src: url("/src/assets/fonts/polly-rounded-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Franks";
+  src: url("/src/assets/fonts/Franks.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -46,4 +60,12 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Franks", sans-serif !important;
+}
+
+span, p, a, li, button {
+  font-family: "Polly Rounded", sans-serif !important;
 }

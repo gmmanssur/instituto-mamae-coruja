@@ -1,36 +1,25 @@
+import logo from "../assets/owl.png";
+
 export function Footer() {
   return (
     <footer className="bg-[#8a3ef4] text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-6 h-6 fill-white text-white"
-              >
-                <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
-              </svg>
+            <div className="flex items-center gap-2 justify-center">
+              <img src={logo} alt="Logo" className="h-10 w-10"/>
 
               <span className="font-bold text-xl">
                 Instituto Mamãe Coruja
               </span>
             </div>
 
-            <p className="text-left text-white/80 text-sm leading-relaxed">
+            <p className="text-center text-white/80 text-sm leading-relaxed">
               Transformando vidas através do amor, cuidado e apoio às famílias
               em situação de vulnerabilidade. Juntos, construímos um futuro melhor.
             </p>
 
-            <div className="flex gap-4 pt-2">
+            <div className="flex gap-4 pt-2 text-center justify-center">
               <a
                 href="https://www.instagram.com/instituto.mamaecoruja/"
                 target="_blank"
@@ -70,7 +59,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="text-left">
+          <div className="text-center">
             <h3 className="font-bold mb-4 text-lg">Links Rápidos</h3>
             <ul className="space-y-2 text-white/80">
               <li><a href="#home" className="hover:text-white hover:pl-1 transition-all">Início</a></li>
@@ -81,11 +70,11 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="text-left">
+          <div className="text-center">
             <h3 className="font-bold mb-4 text-lg">Contato</h3>
 
-            <ul className="space-y-3 text-white/80">
-              <li className="flex items-start gap-3">
+            <ul className="space-y-3 text-white/80 text-center">
+              <li className="flex justify-center gap-3">
                 <svg className="w-5 h-5 mt-0.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
                   <rect x="2" y="4" width="20" height="16" rx="2"></rect>
@@ -93,14 +82,14 @@ export function Footer() {
                 <span className="text-sm">instituto.mamaecoruja@yahoo.com</span>
               </li>
 
-              <li className="flex items-start gap-3">
+              <li className="flex justify-center gap-3">
                 <svg className="w-5 h-5 mt-0.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
                 </svg>
                 <span className="text-sm">(11) 98382-9301</span>
               </li>
 
-              <li className="flex items-start gap-3">
+              <li className="flex justify-center gap-3">
                 <svg className="w-5 h-5 mt-0.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
                   <circle cx="12" cy="10" r="3"></circle>
@@ -125,7 +114,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-12 pt-8 text-center text-sm text-white/60">
+        <div className="border-t border-white/10 mt-12 pt-8 text-center text-[10px] text-white/60">
           <p>© 2026 Instituto Mamãe Coruja. Todos os direitos reservados.</p>
 
           <p className="mt-2">

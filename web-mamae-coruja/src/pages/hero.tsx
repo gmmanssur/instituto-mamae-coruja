@@ -58,16 +58,16 @@ export default function Hero(){
                                 className="w-40 sm:w-52 md:w-64 lg:w-72 h-auto"
                             />
 
-                            <h1 className="text-3xl text-left sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading leading-tight text-center lg:text-left text-[#5d9a94]">
+                            <h1 className="text-3xl text-left sm:text-2xl md:text-3xl lg:text-5xl font-bold font-heading leading-tight text-center lg:text-left text-[#5d9a94]">
                                 Instituto <br />
 
-                                <span className="text-[#a9dfcb] text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">
+                                <span className="text-[#a9dfcb] text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold">
                                 Mamãe Coruja
                                 </span>
                             </h1>
                         </div>
-                        <p className="text-lg text-[#8200db]/100 leading-relaxed text-justify text-[12px] sm:text-[16px] md:text-[18px] lg:text-[20px]">
-                            <h2 className="text-[#8200db] font-bold text-[30px] text-center sm:text-[50px] sm:text-left">Apoiando mães solo</h2>
+                        <p className="text-lg text-[#8200db]/100 leading-relaxed text-justify text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px]">
+                            <h2 className="text-[#8200db] font-bold text-[30px] text-center sm:text-[18px] md:text-[20px] lg:text-[45px] sm:text-left">Apoiando mães solo</h2>
                             
                             <span className="!font-bold">Bem-vindo(a)</span> ao <span className="!font-bold">Instituto Mamãe Coruja.</span> Transformamos vidas através do amor, cuidado e apoio às famílias em situação de vulnerabilidade social. 
                             Juntos, formamos uma legião do bem e contribuímos para fortalecer a sociedade.
@@ -83,7 +83,7 @@ export default function Hero(){
                             </button>
                             
                             <a href="#about" className="inline-flex items-center justify-center font-medium bg-white text-[#5d9a94] border-white hover:bg-gray-100 rounded-full px-8 h-14 text-lg">
-                                Saiba mais {'>'}
+                                Saiba mais
                             </a>
                         </div>    
                     </div>
