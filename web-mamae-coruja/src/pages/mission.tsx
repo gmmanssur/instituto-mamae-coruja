@@ -17,7 +17,7 @@ export function Mission() {
                                 que visa apoiar{" "}
                                 <strong className="text-[#8a3ef4]">Mães</strong> solos em
                                 situação de vulnerabilidade social. Acreditamos que o amparo,
-                                seja material ou emocional, pode ser o impulso para nossos
+                                seja material ou emocional, pode ser o impulso para novos
                                 recomeços.
                                 </p>
 

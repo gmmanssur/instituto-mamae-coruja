@@ -21,7 +21,7 @@ export function Founder(){
                         <img
                         src={foto}
                         alt="Samara - Fundadora"
-                        className="w-full h-[40vh] object-contain mx-auto drop-shadow-2xl rounded-[2rem]"
+                        className="w-full h-[50vh] object-contain mx-auto drop-shadow-2xl rounded-[2rem]"
                         style={{ opacity: 1, transform: "none" }}
                         />
 

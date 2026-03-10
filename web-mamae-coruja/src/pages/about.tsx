@@ -1,6 +1,9 @@
+import bgImg from "../assets/bg-hero.jpeg";
+
 export default function About(){
     return(
-        <section id="about" className="py-24 bg-background">
+        <section id="about" className="py-24 bg-background"
+        style={{backgroundImage: `url(${bgImg})`, backgroundSize: "cover", backgroundPosition: "center"}}>
             <div className="container mx-auto px-4">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-4xl font-bold text-[#5d9a94] mb-6">

@@ -3,6 +3,7 @@ import acoes from "../assets/gallery/acoes/1.jpeg";
 import inclusivos from "../assets/gallery/inclusivos/1.jpeg";
 import conscientiza from "../assets/gallery/conscientiza/1.jpeg";
 import { loadGallery } from "./galleryLoader";
+import volunteer from "../assets/gallery/voluntarios/1.jpeg";
 
 export const galleryData = [
   {
@@ -32,5 +33,12 @@ export const galleryData = [
     title: "Projeto Conscientiza",
     description: "Ações de conscientização sobre a vida e a nossa missão",
     images: loadGallery("conscientiza"),
+  },
+  {
+    id: 5,
+    image: volunteer,
+    title: "Voluntários",
+    description: "Nossos voluntários são o coração do Instituto Mamãe Coruja",
+    images: loadGallery("voluntarios"),
   }
 ];
