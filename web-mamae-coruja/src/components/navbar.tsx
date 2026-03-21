@@ -29,8 +29,6 @@ export default function Navbar() {
       className="fixed top-0 left-0 w-full z-50 bg-[#5d9a94] text-white shadow-md"
     >
       <div className="container mx-auto px-6 h-[72px] flex items-center justify-between">
-        
-        {/* LOGO */}
         <a href="#home" className="flex items-center gap-3">
           <img
             src={logo}
@@ -43,7 +41,6 @@ export default function Navbar() {
           </span>
         </a>
 
-        {/* MENU DESKTOP */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
           <a href="#home">Início</a>
           <a href="#gallery">Galeria</a>
@@ -60,7 +57,6 @@ export default function Navbar() {
           </a>
         </nav>
 
-        {/* BOTÃO MOBILE */}
         <button
           className="md:hidden"
           onClick={() => setOpen(!open)}
@@ -69,7 +65,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* MENU MOBILE */}
       <div
         className={`md:hidden absolute top-full left-0 w-full bg-white text-[#5d9a94] shadow-lg transition-all duration-300 ${
           open ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-3"

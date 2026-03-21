@@ -22,7 +22,6 @@ export function Gallery() {
           </p>
         </div>
 
-        {/* CARROSSEL */}
         <div className="flex justify-center px-4">
           <div className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-6 max-w-5xl">
             {galleryData.map((item) => (

@@ -14,8 +14,6 @@ export function Donate() {
       className="py-20 bg-gradient-to-b from-[#5d9a94]/5 to-[#a9dfcb]"
     >
       <div className="container mx-auto px-4">
-
-        {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-4xl font-bold text-[#5d9a94] mb-4">
             Faça uma Doação
@@ -27,10 +25,7 @@ export function Donate() {
           </p>
         </div>
 
-        {/* GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-
-          {/* CARD 1 */}
           <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 flex flex-col justify-between text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
 
             <div>
@@ -57,7 +52,6 @@ export function Donate() {
             </div>
           </div>
 
-          {/* CARD 2 */}
           <div className="relative bg-white rounded-3xl p-6 shadow-xl border-2 border-purple-500 flex flex-col justify-between text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 lg:scale-105">
 
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-500 text-white px-4 py-1 rounded-full text-xs font-bold">
@@ -90,7 +84,6 @@ export function Donate() {
             </div>
           </div>
 
-          {/* CARD 3 */}
           <div className="sm:col-span-2 lg:col-span-1 bg-white rounded-3xl p-6 shadow-xl border border-gray-100 flex flex-col justify-between text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
             <div>
               <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 p-2">

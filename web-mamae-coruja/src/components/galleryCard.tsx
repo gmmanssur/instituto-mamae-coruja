@@ -21,7 +21,6 @@ export function GalleryCard({
       cursor-pointer
       "
     >
-      {/* imagem */}
       <img
         src={image}
         alt={title}
@@ -37,8 +36,7 @@ export function GalleryCard({
         group-hover:scale-110
         "
       />
-
-      {/* barra inferior */}
+      
       <div
         className="
         absolute
