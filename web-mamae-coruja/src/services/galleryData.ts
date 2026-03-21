@@ -1,9 +1,10 @@
 import sonhar from "../assets/gallery/sonhar/1.jpeg";
 import acoes from "../assets/gallery/acoes/1.jpeg";
-import inclusivos from "../assets/gallery/inclusivos/1.jpeg";
+import iluminar from "../assets/gallery/iluminar/1.jpeg";
 import conscientiza from "../assets/gallery/conscientiza/1.jpeg";
 import { loadGallery } from "./galleryLoader";
 import volunteer from "../assets/gallery/voluntarios/1.jpeg";
+import eventos from "../assets/gallery/eventos/1.jpeg";
 
 export const galleryData = [
   {
@@ -15,10 +16,10 @@ export const galleryData = [
   },
   {
     id: 2,
-    image: inclusivos,
-    title: "Projetos Inclusivos",
+    image: iluminar,
+    title: "Projeto Iluminar",
     description: "Projetos que promovem a inclusão social e o bem-estar das famílias",
-    images: loadGallery("inclusivos"),
+    images: loadGallery("iluminar"),
   },
   {
     id: 3,
@@ -40,5 +41,12 @@ export const galleryData = [
     title: "Voluntários",
     description: "Nossos voluntários são o coração do Instituto Mamãe Coruja",
     images: loadGallery("voluntarios"),
+  },
+  {
+    id: 6,
+    image: eventos,
+    title: "Eventos",
+    description: "Participações para levar o Instituto Mamãe Coruja ao mundo",
+    images: loadGallery("eventos"),
   }
 ];

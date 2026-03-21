@@ -63,9 +63,10 @@ export function Footer() {
             <h3 className="font-bold mb-4 text-lg">Links Rápidos</h3>
             <ul className="space-y-2 text-white/80">
               <li><a href="#home" className="hover:text-white hover:pl-1 transition-all">Início</a></li>
-              <li><a href="#about" className="hover:text-white hover:pl-1 transition-all">Sobre Nós</a></li>
-              <li><a href="#founder" className="hover:text-white hover:pl-1 transition-all">Fundadora</a></li>
+              <li><a href="#gallery" className="hover:text-white hover:pl-1 transition-all">Galeria</a></li>
               <li><a href="#donation" className="hover:text-white hover:pl-1 transition-all">Doação</a></li>
+              <li><a href="#founder" className="hover:text-white hover:pl-1 transition-all">Fundadora</a></li>
+              <li><a href="#about" className="hover:text-white hover:pl-1 transition-all">Sobre Nós</a></li>
               <li><a href="#volunteer" className="hover:text-white hover:pl-1 transition-all">Voluntários</a></li>
             </ul>
           </div>

@@ -46,10 +46,10 @@ export default function Navbar() {
         {/* MENU DESKTOP */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
           <a href="#home">Início</a>
-          <a href="#about">Sobre Nós</a>
-          <a href="#founder">Fundadora</a>
-          <a href="#donation">Doação</a>
           <a href="#gallery">Galeria</a>
+          <a href="#donation">Doação</a>
+          <a href="#founder">Fundadora</a>
+          <a href="#about">Sobre Nós</a>
           <a href="#volunteer">Voluntários</a>
 
           <a
@@ -77,10 +77,10 @@ export default function Navbar() {
       >
         <nav className="flex flex-col gap-6 p-6 text-sm font-medium">
           <a href="#home" onClick={() => setOpen(false)}>Início</a>
-          <a href="#about" onClick={() => setOpen(false)}>Sobre Nós</a>
-          <a href="#founder" onClick={() => setOpen(false)}>Fundadora</a>
-          <a href="#donation" onClick={() => setOpen(false)}>Doação</a>
           <a href="#gallery" onClick={() => setOpen(false)}>Galeria</a>
+          <a href="#donation" onClick={() => setOpen(false)}>Doação</a>
+          <a href="#founder" onClick={() => setOpen(false)}>Fundadora</a>
+          <a href="#about" onClick={() => setOpen(false)}>Sobre Nós</a>
           <a href="#volunteer" onClick={() => setOpen(false)}>Voluntários</a>
 
           <a

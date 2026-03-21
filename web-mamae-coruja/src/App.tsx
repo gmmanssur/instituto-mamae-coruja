@@ -10,6 +10,7 @@ import Volunteer from './pages/volunteer'
 import Footer from './pages/footer'
 import WhatsAppWidget from './components/WhatsAppWidget'
 import bgImg from "./assets/bg-hero.jpeg";
+import Sponsor from './components/sponsor'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Hero />
           <Gallery />
         </div>
+        <Sponsor />
         <Mission />
         <Donate />
         <Founder />

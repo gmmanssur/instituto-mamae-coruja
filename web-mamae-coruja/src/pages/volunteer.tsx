@@ -59,17 +59,18 @@ export function Volunteer() {
         </div>
 
         {/* GRID RESPONSIVO */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {volunteerRoles.map((role, index) => {
             const Icon = role.icon;
-
             const isLast = index === volunteerRoles.length - 1;
 
             return (
               <div
                 key={index}
-                className={`bg-white rounded-3xl p-6 md:p-8 text-center shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 flex flex-col h-full
-                ${isLast ? "col-span-2 lg:col-span-1" : ""}`}
+                className={`bg-white rounded-3xl p-6 md:p-8 text-center shadow-lg 
+                hover:shadow-2xl transition-all hover:-translate-y-1 
+                flex flex-col 
+                ${isLast ? "sm:col-span-2 lg:col-span-1" : ""}`}
               >
                 <div
                   className={`w-14 h-14 md:w-16 md:h-16 ${role.iconBg} text-white rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-md`}

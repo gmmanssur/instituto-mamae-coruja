@@ -11,10 +11,12 @@ export function Donate() {
   return (
     <section
       id="donation"
-      className="py-20 bg-gradient-to-b from-[#5d9a94]/5 to-[#a9dfcb] text-center"
+      className="py-20 bg-gradient-to-b from-[#5d9a94]/5 to-[#a9dfcb]"
     >
       <div className="container mx-auto px-4">
-        <div className="mb-8">
+
+        {/* Header */}
+        <div className="text-center mb-10">
           <h2 className="text-4xl font-bold text-[#5d9a94] mb-4">
             Faça uma Doação
           </h2>
@@ -25,79 +27,93 @@ export function Donate() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 items-stretch gap-5 sm:gap-6 max-w-5xl mx-auto mb-10">
+        {/* GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
 
           {/* CARD 1 */}
-          <div className="relative bg-white rounded-3xl p-6 shadow-xl border-2 border-transparent flex flex-col items-center h-full hover:-translate-y-2 transition">
-            
-            <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-4 p-2">
-              <img src={owlBaby} className="w-full h-full object-contain" />
+          <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 flex flex-col justify-between text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+
+            <div>
+              <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4 p-2">
+                <img alt="Icon" src={owlBaby} className="w-full h-full object-contain" />
+              </div>
+
+              <h3 className="text-lg font-bold mb-2">Doação Baby</h3>
+
+              <p className="text-gray-500 text-sm mb-6">
+                Faça uma doação pontual e ajude uma família hoje mesmo.
+              </p>
             </div>
 
-            <h3 className="text-lg font-bold mb-1">Doação Baby</h3>
+            <div>
+              <div className="text-2xl font-bold mb-6">R$ 50</div>
 
-            <p className="text-gray-500 text-xs mb-4 text-center flex-grow">
-              Faça uma doação pontual e ajude uma família hoje mesmo.
-            </p>
-
-            <div className="text-2xl font-bold mb-6">R$ 50</div>
-
-            <button
-              className="mt-auto w-full rounded-full font-bold text-white bg-green-500 h-10 text-sm cursor-pointer"
-              onClick={() => setSelected(donationPlans.baby)}
-            >
-              Doar Agora
-            </button>
+              <button
+                className="w-full rounded-full font-bold text-white bg-green-500 h-11 text-sm hover:bg-green-600 transition cursor-pointer"
+                onClick={() => setSelected(donationPlans.baby)}
+              >
+                Doar Agora
+              </button>
+            </div>
           </div>
 
           {/* CARD 2 */}
-          <div className="relative bg-white rounded-3xl p-6 shadow-xl border-2 border-purple-500 flex flex-col items-center h-full hover:-translate-y-2 transition scale-105">
+          <div className="relative bg-white rounded-3xl p-6 shadow-xl border-2 border-purple-500 flex flex-col justify-between text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 lg:scale-105">
 
-            <div className="absolute -top-3 bg-purple-500 text-white px-4 py-1 rounded-full text-xs font-bold">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-500 text-white px-4 py-1 rounded-full text-xs font-bold">
               Mais Popular
             </div>
 
-            <div className="w-20 h-20 bg-purple-50 rounded-full flex items-center justify-center mb-4 p-2">
-              <img src={owlSolo} className="w-full h-full object-contain" />
+            <div>
+              <div className="w-20 h-20 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-4 p-2">
+                <img alt="Icon" src={owlSolo} className="w-full h-full object-contain" />
+              </div>
+
+              <h3 className="text-lg font-bold mb-2">Doação Premium</h3>
+
+              <p className="text-gray-500 text-sm mb-6">
+                Torne-se um padrinho e transforme vidas.
+              </p>
             </div>
 
-            <h3 className="text-lg font-bold mb-1">Doação Premium</h3>
+            <div>
+              <div className="text-xl sm:text-2xl font-bold mb-6">
+                Valor livre
+              </div>
 
-            <p className="text-gray-500 text-xs mb-4 text-center flex-grow">
-              Torne-se um padrinho e transforme vidas.
-            </p>
-
-            <div className="text-[20px] sm:text-2xl font-bold mb-6">Valor livre</div>
-
-            <button
-              className="mt-auto w-full rounded-full font-bold text-white bg-purple-500 h-10 text-sm cursor-pointer"
-              onClick={() => setSelected(donationPlans.premium)}
-            >
-              Doar Agora
-            </button>
+              <button
+                className="w-full rounded-full font-bold text-white bg-purple-500 h-11 text-sm hover:bg-purple-600 transition cursor-pointer"
+                onClick={() => setSelected(donationPlans.premium)}
+              >
+                Doar Agora
+              </button>
+            </div>
           </div>
 
           {/* CARD 3 */}
-          <div className="relative col-span-2 sm:col-span-1 bg-white rounded-3xl p-6 shadow-xl border-2 border-transparent flex flex-col items-center h-full hover:-translate-y-2 transition">
-            
-            <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mb-4 p-2">
-              <img src={owl} className="w-full h-full object-contain" />
+          <div className="sm:col-span-2 lg:col-span-1 bg-white rounded-3xl p-6 shadow-xl border border-gray-100 flex flex-col justify-between text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+            <div>
+              <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 p-2">
+                <img alt="Icon" src={owl} className="w-full h-full object-contain" />
+              </div>
+
+              <h3 className="text-lg font-bold mb-2">Doação VIP</h3>
+
+              <p className="text-gray-500 text-sm mb-6">
+                Contribua com uma generosa doação. 
+              </p>
             </div>
 
-            <h3 className="text-lg font-bold mb-1">Doação VIP</h3>
+            <div>
+              <div className="text-2xl font-bold mb-6">R$ 100</div>
 
-            <p className="text-gray-500 text-xs mb-4 text-center flex-grow">
-              Contribua com um valor personalizado.
-            </p>
-
-            <div className="text-2xl font-bold mb-6">R$ 100</div>
-
-            <button
-              className="mt-auto w-full rounded-full font-bold text-white bg-blue-500 h-10 text-sm cursor-pointer"
-              onClick={() => setSelected(donationPlans.vip)}
-            >
-              Doar Agora
-            </button>
+              <button
+                className="w-full rounded-full font-bold text-white bg-blue-500 h-11 text-sm hover:bg-blue-600 transition cursor-pointer"
+                onClick={() => setSelected(donationPlans.vip)}
+              >
+                Doar Agora
+              </button>
+            </div>
           </div>
 
         </div>
