@@ -1,3 +1,6 @@
+import santosLogo from "../assets/sponsor/santos.jpeg";
+import lionsLogo from "../assets/sponsor/lions.png";
+
 export default function Sponsor() {
   return (
     <section className="w-full bg-gray-100 py-8">
@@ -9,12 +12,12 @@ export default function Sponsor() {
         <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
           <img
             className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition cursor-pointer"
-            src="../assets/sponsor/santos.jpeg"
+            src={santosLogo}
             alt="Sponsor Santos Logo"
           />
           <img
             className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition cursor-pointer"
-            src="../assets/sponsor/lions.png"
+            src={lionsLogo}
             alt="Sponsor Lions Logo"
           />
         </div>
