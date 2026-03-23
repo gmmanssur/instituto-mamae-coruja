@@ -61,9 +61,9 @@ export default function Hero(){
                             <h1 className="text-3xl text-left sm:text-2xl md:text-3xl lg:text-5xl font-bold font-heading leading-tight text-center lg:text-left text-[#5d9a94]">
                                 Instituto <br />
 
-                                <span className="text-[#a9dfcb] text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold">
+                                <h2 className="text-[#a9dfcb] text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold">
                                 Mamãe Coruja
-                                </span>
+                                </h2>
                             </h1>
                         </div>
                         <p className="text-lg text-[#8200db]/100 leading-relaxed text-justify text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px]">
