@@ -40,13 +40,13 @@ export default function Sponsor() {
           >
             {[...sponsors, ...sponsors].map((item, index) => (
               <div 
-                key={index}
+                key={`${item.name}-${item.src}-${index}`}
                 className="relative flex flex-col items-center"
-                onMouseEnter={() => setHovered(index)}
-                onMouseLeave={() => setHovered(null)}
+                onMouseEnter={() => window.innerWidth > 768 && setHovered(index)}
+                onMouseLeave={() => window.innerWidth > 768 && setHovered(null)}
               >
                 <img
-                  className={`h-20 object-contain transition duration-300 cursor-pointer ${
+                  className={`h-22 object-contain transition duration-300 cursor-pointer ${
                     hovered === index
                       ? "grayscale-0 opacity-100"
                       : "grayscale opacity-70"
