@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import pauloGasgonLogo from "../assets/sponsor/paulo-gasgon.jpeg";
 import santosLogo from "../assets/sponsor/santos.jpeg"; 
@@ -9,6 +9,9 @@ import sgLogo from "../assets/sponsor/sg.jpeg";
 
 export default function Sponsor() { 
   const [hovered, setHovered] = useState<number | null>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const position = useRef(0);
+  const animationRef = useRef<number | null>(null);
 
   const sponsors = [
     { src: pauloGasgonLogo, name: "Paulo Gasgon" },
@@ -19,6 +22,36 @@ export default function Sponsor() {
     { src: sgLogo, name: "SG" },
   ];
 
+  const looped = [...sponsors, ...sponsors];
+
+  useEffect(() => {
+    const speed = 1;
+
+    const animate = () => {
+      if (!trackRef.current) return;
+
+      if (hovered === null) {
+        position.current -= speed;
+
+        const width = trackRef.current.scrollWidth / 2;
+
+        if (Math.abs(position.current) >= width) {
+          position.current = 0;
+        }
+
+        trackRef.current.style.transform = `translateX(${position.current}px)`;
+      }
+
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animationRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
+    };
+  }, [hovered]);
+
   return ( 
     <section className="w-full bg-gray-100 py-10 overflow-hidden"> 
       <div className="max-w-5xl mx-auto px-4 text-center"> 
@@ -28,31 +61,29 @@ export default function Sponsor() {
         </h2> 
         
         <div className="relative w-full overflow-hidden">
-          <div className="pointer-events-none absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-gray-100 to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-gray-100 to-transparent z-10" />
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-gray-100 to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-gray-100 to-transparent z-10" />
 
           <div
-            className="flex w-max gap-12 items-center whitespace-nowrap animate-scroll"
-            style={{
-              "--speed": "15s",
-              animationPlayState: hovered !== null ? "paused" : "running",
-            } as React.CSSProperties}
+            ref={trackRef}
+            className="flex gap-12 items-center"
           >
-            {[...sponsors, ...sponsors].map((item, index) => (
+            {looped.map((item, index) => (
               <div 
-                key={`${item.name}-${item.src}-${index}`}
-                className="relative flex flex-col items-center"
+                key={`${item.name}-${index}`}
+                className="flex-shrink-0 flex flex-col items-center"
                 onMouseEnter={() => window.innerWidth > 768 && setHovered(index)}
                 onMouseLeave={() => window.innerWidth > 768 && setHovered(null)}
               >
                 <img
-                  className={`h-22 object-contain transition duration-300 cursor-pointer ${
+                  className={`h-16 md:h-20 object-contain transition duration-300 ${
                     hovered === index
-                      ? "grayscale-0 opacity-100"
+                      ? "grayscale-0 opacity-100 scale-110"
                       : "grayscale opacity-70"
                   }`}
                   src={item.src}
                   alt={item.name}
+                  draggable={false}
                 />
               </div>
             ))}
