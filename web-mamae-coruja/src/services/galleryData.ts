@@ -13,7 +13,7 @@ export const galleryData = [
     title: "Projeto Criar e Sonhar",
     description: "Momentos onde levamos a nossa missão para o mundo",
     images: loadGallery("sonhar"),
-    idealizado: "Idealizadora: Pati C., Pati B., Helen, Noeli e Elinete"
+    idealizado: "Idealizadoras: Pati C., Pati B., Helen, Noeli e Elinete"
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const galleryData = [
     title: "Projeto Iluminar",
     description: "Projetos que promovem a inclusão social e o bem-estar das famílias",
     images: loadGallery("iluminar"),
-    idealizado: "Idealizadora: Cris Levado"
+    idealizado: "Idealizadora: Cris Levado (Psicanalista)"
   },
   {
     id: 3,

@@ -17,7 +17,7 @@ export default {
         },
       },
       animation: {
-        scroll: "scroll var(--speed, 30s) linear infinite",
+        scroll: "scroll var(--speed, 10s) linear infinite",
       },
     },
   },
