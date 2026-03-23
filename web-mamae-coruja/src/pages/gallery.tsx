@@ -34,6 +34,7 @@ export function Gallery() {
                   image={item.image}
                   title={item.title}
                   description={item.description}
+                  idealizado={item.idealizado}
                 />
               </div>
             ))}

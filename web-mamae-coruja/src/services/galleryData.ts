@@ -13,6 +13,7 @@ export const galleryData = [
     title: "Projeto Criar e Sonhar",
     description: "Momentos onde levamos a nossa missão para o mundo",
     images: loadGallery("sonhar"),
+    idealizado: "Idealizadora: Pati C., Pati B., Helen, Noeli e Elinete"
   },
   {
     id: 2,
@@ -20,20 +21,23 @@ export const galleryData = [
     title: "Projeto Iluminar",
     description: "Projetos que promovem a inclusão social e o bem-estar das famílias",
     images: loadGallery("iluminar"),
+    idealizado: "Idealizadora: Cris Levado"
   },
   {
     id: 3,
-    image: acoes,
-    title: "Ações Realizadas",
-    description: "Distribuições em Santos, Peruíbe, Itanhaém, Suzano e SBC",
-    images: loadGallery("acoes"),
-  },
-  {
-    id: 4,
     image: conscientiza,
     title: "Projeto Conscientiza",
     description: "Ações de conscientização sobre a vida e a nossa missão",
     images: loadGallery("conscientiza"),
+    idealizado: "Idealizador: Vinícius Laerte"
+  },
+  {
+    id: 4,
+    image: acoes,
+    title: "Ações Realizadas",
+    description: "Distribuições em Santos, Peruíbe, Itanhaém, Suzano e SBC",
+    images: loadGallery("acoes"),
+    idealizado: ""
   },
   {
     id: 5,
@@ -41,6 +45,7 @@ export const galleryData = [
     title: "Voluntários",
     description: "Nossos voluntários são o coração do Instituto Mamãe Coruja",
     images: loadGallery("voluntarios"),
+    idealizado: ""
   },
   {
     id: 6,
@@ -48,5 +53,6 @@ export const galleryData = [
     title: "Eventos",
     description: "Participações para levar o Instituto Mamãe Coruja ao mundo",
     images: loadGallery("eventos"),
+    idealizado: ""
   }
 ];

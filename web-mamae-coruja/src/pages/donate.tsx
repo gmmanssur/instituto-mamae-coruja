@@ -93,7 +93,7 @@ export function Donate() {
               <h3 className="text-lg font-bold mb-2">Doação VIP</h3>
 
               <p className="text-gray-500 text-sm mb-6">
-                Contribua com uma generosa doação. 
+                Doe uma cesta básica. 
               </p>
             </div>
 

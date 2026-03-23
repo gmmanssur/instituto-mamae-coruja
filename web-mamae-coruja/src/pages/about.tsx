@@ -16,6 +16,11 @@ export default function About(){
                         e oportunidade que merecem.
                     </p>
 
+                    <p className="text-gray-600 text-lg mb-4">
+                        A consolidação do instituto deu-se em 2024, mas os trabalhos iniciariam em 2018, 
+                        onde entregávamos kit de bebês para mamães na maternidade.
+                    </p>
+
                     <p className="text-gray-600 text-lg">
                         Trabalhamos incansavelmente para fortalecer vidas e as ajudamos
                         seguir buscando novos sonhos.

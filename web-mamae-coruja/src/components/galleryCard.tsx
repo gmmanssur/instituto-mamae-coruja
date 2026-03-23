@@ -2,12 +2,14 @@ interface GalleryCardProps {
   readonly image: string;
   readonly title: string;
   readonly description: string;
+  readonly idealizado: string;
 }
 
 export function GalleryCard({
   image,
   title,
   description,
+  idealizado
 }: GalleryCardProps) {
   return (
     <div
@@ -56,6 +58,9 @@ export function GalleryCard({
 
         <p className="text-xs text-gray-500 line-clamp-2 mt-1">
           {description}
+        </p>
+        <p className="text-xs text-[#8200db] line-clamp-2 mt-1">
+          {idealizado}
         </p>
       </div>
     </div>

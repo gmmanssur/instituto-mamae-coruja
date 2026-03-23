@@ -59,7 +59,7 @@ export function Founder(){
 
                         <div className="text-gray-600 leading-relaxed text-lg">
                             <p className="text-justify">
-                                Casada há 26 anos com Mário — advogado, professor e gestor —
+                                Casada há 26 anos com Doutor Mário — advogado, professor e gestor —
                                 é mãe de duas filhas, Beatriz e Maria Luiza. Bacharel em Direito
                                 e pós-graduada em Constelação Familiar, construiu uma trajetória
                                 marcada pela empatia e dedicação ao próximo.
@@ -83,7 +83,7 @@ export function Founder(){
                         
                             <div className="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-yellow-100 text-center flex flex-col justify-center min-h-[100px] z-[998]">
                                 <div className="text-2xl md:text-3xl font-bold text-[#8a3ef4] font-heading mb-1">
-                                8+
+                                10+
                                 </div>
                                 <div className="text-[10px] md:text-xs text-gray-500 font-medium uppercase tracking-wider leading-tight">
                                 Anos de Experiência
@@ -92,7 +92,7 @@ export function Founder(){
 
                             <div className="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-yellow-100 text-center flex flex-col justify-center min-h-[100px] z-[998]">
                                 <div className="text-2xl md:text-3xl font-bold text-[#8a3ef4] font-heading mb-1">
-                                50+
+                                100+
                                 </div>
                                 <div className="text-[10px] md:text-xs text-gray-500 font-medium uppercase tracking-wider leading-tight">
                                 Projetos Realizados
