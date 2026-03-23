@@ -34,7 +34,7 @@ export default function Sponsor() {
           <div
             className="flex w-max gap-12 items-center whitespace-nowrap animate-scroll"
             style={{
-              "--speed": "10s",
+              "--speed": "15s",
               animationPlayState: hovered !== null ? "paused" : "running",
             } as React.CSSProperties}
           >
