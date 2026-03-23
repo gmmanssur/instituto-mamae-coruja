@@ -76,11 +76,7 @@ export default function Sponsor() {
                 onMouseLeave={() => window.innerWidth > 768 && setHovered(null)}
               >
                 <img
-                  className={`h-16 md:h-20 object-contain transition duration-300 ${
-                    hovered === index
-                      ? "grayscale-0 opacity-100 scale-110"
-                      : "grayscale opacity-70"
-                  }`}
+                  className={`h-16 md:h-20 object-contain transition duration-300 `}
                   src={item.src}
                   alt={item.name}
                   draggable={false}
