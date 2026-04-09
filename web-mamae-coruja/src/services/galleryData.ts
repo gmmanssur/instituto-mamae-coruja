@@ -21,7 +21,7 @@ export const galleryData = [
     title: "Projeto Iluminar",
     description: "Projetos que promovem a inclusão social e o bem-estar das famílias",
     images: loadGallery("iluminar"),
-    idealizado: "Idealizadora: Cris Levado (Psicanalista)"
+    idealizado: "Idealizadora: Cris Levado (Psicanalista) e Isabella Marcheto (Psicóloga)"
   },
   {
     id: 3,
