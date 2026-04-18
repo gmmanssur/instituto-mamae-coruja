@@ -51,18 +51,19 @@ export function Gallery() {
     window.addEventListener("resize", updateButtons);
 
     const autoSlide = setInterval(() => {
-      if (!el) return;
+      const currentEl = scrollRef.current;
+      if (!currentEl) return;
 
-      const max = el.scrollWidth - el.clientWidth;
-      const end = el.scrollLeft >= max - 10;
+      const max = currentEl.scrollWidth - currentEl.clientWidth;
+      const end = currentEl.scrollLeft >= max - 10;
 
       if (end) {
-        el.scrollTo({
+        currentEl.scrollTo({
           left: 0,
           behavior: "smooth",
         });
       } else {
-        el.scrollBy({
+        currentEl.scrollBy({
           left: CARD_WIDTH,
           behavior: "smooth",
         });
@@ -106,15 +107,7 @@ export function Gallery() {
           </div>
 
           {/* CAROUSEL */}
-          <div className="relative max-w-6xl overflow-hidden">
-            {canLeft && (
-              <div className="absolute left-0 top-0 h-full w-16 z-10 pointer-events-none bg-gradient-to-r from-pink-50/90 to-transparent" />
-            )}
-
-            {canRight && (
-              <div className="absolute right-0 top-0 h-full w-16 z-10 pointer-events-none bg-gradient-to-l from-pink-50/90 to-transparent" />
-            )}
-
+          <div className="max-w-6xl overflow-hidden">
             <div
               ref={scrollRef}
               className="flex gap-6 overflow-x-hidden pb-4"
