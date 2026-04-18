@@ -54,6 +54,9 @@ export function Gallery() {
       const currentEl = scrollRef.current;
       if (!currentEl) return;
 
+      /* autoplay apenas desktop */
+      if (window.innerWidth < 768) return;
+
       const max = currentEl.scrollWidth - currentEl.clientWidth;
       const end = currentEl.scrollLeft >= max - 10;
 
@@ -94,8 +97,8 @@ export function Gallery() {
 
         <div className="flex items-center justify-center gap-5">
 
-          {/* LEFT BUTTON */}
-          <div className="w-14 flex justify-center">
+          {/* LEFT BUTTON - desktop only */}
+          <div className="hidden md:flex w-14 justify-center">
             {canLeft && (
               <button
                 onClick={scrollLeft}
@@ -107,10 +110,15 @@ export function Gallery() {
           </div>
 
           {/* CAROUSEL */}
-          <div className="max-w-6xl overflow-hidden">
+          <div className="max-w-6xl overflow-hidden w-full">
             <div
               ref={scrollRef}
-              className="flex gap-6 overflow-x-hidden pb-4"
+              className="
+                flex gap-6 pb-4
+                overflow-x-auto md:overflow-x-hidden
+                snap-x snap-mandatory
+                scrollbar-hide
+              "
               style={{
                 scrollBehavior: "smooth",
                 transition: "all 0.8s ease-in-out",
@@ -120,7 +128,13 @@ export function Gallery() {
                 <div
                   key={item.id}
                   onClick={() => setSelected(item)}
-                  className="flex-shrink-0 w-[280px] md:w-[320px] transition-all duration-700 ease-out hover:scale-[1.02]"
+                  className="
+                    flex-shrink-0
+                    w-[280px] md:w-[320px]
+                    snap-center
+                    transition-all duration-700 ease-out
+                    hover:scale-[1.02]
+                  "
                 >
                   <GalleryCard
                     image={item.image}
@@ -133,8 +147,8 @@ export function Gallery() {
             </div>
           </div>
 
-          {/* RIGHT BUTTON */}
-          <div className="w-14 flex justify-center">
+          {/* RIGHT BUTTON - desktop only */}
+          <div className="hidden md:flex w-14 justify-center">
             {canRight && (
               <button
                 onClick={scrollRight}
