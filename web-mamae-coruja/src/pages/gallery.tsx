@@ -1,14 +1,83 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 import { GalleryCard } from "../components/galleryCard";
 import { galleryData } from "../services/galleryData";
 import GalleryModal from "../modal/galleryModal";
+import GalleryVideos from "../components/galleryVideos";
 
 export function Gallery() {
   const [selected, setSelected] = useState<null | (typeof galleryData)[0]>(null);
 
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const [canLeft, setCanLeft] = useState(false);
+  const [canRight, setCanRight] = useState(true);
+
+  const CARD_WIDTH = 344;
+
+  function updateButtons() {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const left = el.scrollLeft;
+    const max = el.scrollWidth - el.clientWidth;
+
+    setCanLeft(left > 10);
+    setCanRight(left < max - 10);
+  }
+
+  function scrollLeft() {
+    scrollRef.current?.scrollBy({
+      left: -CARD_WIDTH,
+      behavior: "smooth",
+    });
+  }
+
+  function scrollRight() {
+    scrollRef.current?.scrollBy({
+      left: CARD_WIDTH,
+      behavior: "smooth",
+    });
+  }
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    updateButtons();
+
+    el.addEventListener("scroll", updateButtons);
+    window.addEventListener("resize", updateButtons);
+
+    const autoSlide = setInterval(() => {
+      if (!el) return;
+
+      const max = el.scrollWidth - el.clientWidth;
+      const end = el.scrollLeft >= max - 10;
+
+      if (end) {
+        el.scrollTo({
+          left: 0,
+          behavior: "smooth",
+        });
+      } else {
+        el.scrollBy({
+          left: CARD_WIDTH,
+          behavior: "smooth",
+        });
+      }
+    }, 5500);
+
+    return () => {
+      el.removeEventListener("scroll", updateButtons);
+      window.removeEventListener("resize", updateButtons);
+      clearInterval(autoSlide);
+    };
+  }, []);
+
   return (
     <section id="gallery" className="py-24 bg-pink-50/50">
-
       <div className="container mx-auto px-4">
 
         <div className="text-center mb-16 text-[#5d9a94]">
@@ -22,25 +91,68 @@ export function Gallery() {
           </p>
         </div>
 
-        <div className="flex justify-center px-4">
-          <div className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-6 max-w-5xl">
-            {galleryData.map((item) => (
-              <div
-                key={item.id}
-                onClick={() => setSelected(item)}
-                className="snap-start flex-shrink-0 w-[280px] md:w-[320px]"
-              >
-                <GalleryCard
-                  image={item.image}
-                  title={item.title}
-                  description={item.description}
-                  idealizado={item.idealizado}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <div className="flex items-center justify-center gap-5">
 
+          {/* LEFT BUTTON */}
+          <div className="w-14 flex justify-center">
+            {canLeft && (
+              <button
+                onClick={scrollLeft}
+                className="bg-white/90 backdrop-blur-md shadow-xl rounded-full p-3 hover:scale-110 transition-all duration-500"
+              >
+                <ChevronLeft size={24} />
+              </button>
+            )}
+          </div>
+
+          {/* CAROUSEL */}
+          <div className="relative max-w-6xl overflow-hidden">
+            {canLeft && (
+              <div className="absolute left-0 top-0 h-full w-16 z-10 pointer-events-none bg-gradient-to-r from-pink-50/90 to-transparent" />
+            )}
+
+            {canRight && (
+              <div className="absolute right-0 top-0 h-full w-16 z-10 pointer-events-none bg-gradient-to-l from-pink-50/90 to-transparent" />
+            )}
+
+            <div
+              ref={scrollRef}
+              className="flex gap-6 overflow-x-hidden pb-4"
+              style={{
+                scrollBehavior: "smooth",
+                transition: "all 0.8s ease-in-out",
+              }}
+            >
+              {galleryData.map((item) => (
+                <div
+                  key={item.id}
+                  onClick={() => setSelected(item)}
+                  className="flex-shrink-0 w-[280px] md:w-[320px] transition-all duration-700 ease-out hover:scale-[1.02]"
+                >
+                  <GalleryCard
+                    image={item.image}
+                    title={item.title}
+                    description={item.description}
+                    idealizado={item.idealizado}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* RIGHT BUTTON */}
+          <div className="w-14 flex justify-center">
+            {canRight && (
+              <button
+                onClick={scrollRight}
+                className="bg-white/90 backdrop-blur-md shadow-xl rounded-full p-3 hover:scale-110 transition-all duration-500"
+              >
+                <ChevronRight size={24} />
+              </button>
+            )}
+          </div>
+
+        </div>
       </div>
 
       {selected && (
@@ -51,6 +163,7 @@ export function Gallery() {
         />
       )}
 
+      <GalleryVideos />
     </section>
   );
 }

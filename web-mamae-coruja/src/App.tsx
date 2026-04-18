@@ -11,12 +11,14 @@ import Footer from './pages/footer'
 import WhatsAppWidget from './components/WhatsAppWidget'
 import bgImg from "./assets/bg-hero.jpeg";
 import Sponsor from './components/sponsor'
+import BackgroundMusic from './components/backgroundMusic'
 
 function App() {
   return (
       <main className='w-full min-h-screen'>
         <Navbar />
         <div style={{backgroundImage: `url(${bgImg})`, backgroundSize: "cover", backgroundPosition: "center"}}>
+          <BackgroundMusic />
           <Hero />
           <Gallery />
         </div>

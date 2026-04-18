@@ -1,0 +1,114 @@
+import { useEffect, useMemo, useRef, useState } from "react";
+import { Volume2, Pause, Play } from "lucide-react";
+
+/*
+Vite + React
+Carrega todos .mp3 da pasta:
+../assets/music
+*/
+
+const musicFiles = Object.values(
+  import.meta.glob("../assets/music/*.mp3", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  })
+) as string[];
+
+export function BackgroundMusic() {
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const [playing, setPlaying] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const playlist = useMemo(() => {
+    return [...musicFiles].sort(() => Math.random() - 0.5);
+  }, []);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio || playlist.length === 0) return;
+
+    audio.volume = 0.2;
+    audio.src = playlist[currentIndex];
+    audio.load();
+
+    const tryPlay = async () => {
+      try {
+        await audio.play();
+        setPlaying(true);
+      } catch {
+        /* navegador pode bloquear autoplay */
+        setPlaying(false);
+      }
+    };
+
+    tryPlay();
+  }, []);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio || playlist.length === 0) return;
+
+    audio.src = playlist[currentIndex];
+    audio.load();
+
+    if (playing) {
+      audio.play().catch(() => {});
+    }
+  }, [currentIndex]);
+
+  function nextTrack() {
+    setCurrentIndex((prev) =>
+      prev + 1 >= playlist.length ? 0 : prev + 1
+    );
+  }
+
+  async function togglePlay() {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (playing) {
+      audio.pause();
+      setPlaying(false);
+      return;
+    }
+
+    try {
+      await audio.play();
+      setPlaying(true);
+    } catch {
+      setPlaying(false);
+    }
+  }
+
+  return (
+    <>
+      <audio
+        ref={audioRef}
+        onEnded={nextTrack}
+        preload="auto"
+      />
+
+      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3">
+
+        {/* volume ativo */}
+        <div className="bg-white/90 backdrop-blur-md shadow-xl rounded-full p-4">
+          <Volume2 size={22} />
+        </div>
+
+        {/* play / pause */}
+        <button
+          onClick={togglePlay}
+          className="bg-white/90 backdrop-blur-md shadow-xl rounded-full p-4 hover:scale-110 transition-all duration-300"
+          aria-label="Controlar música ambiente"
+        >
+          {playing ? <Pause size={22} /> : <Play size={22} />}
+        </button>
+
+      </div>
+    </>
+  );
+}
+
+export default BackgroundMusic;
