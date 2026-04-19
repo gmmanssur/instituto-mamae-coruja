@@ -27,7 +27,7 @@ export const galleryData = [
     id: 3,
     image: conscientiza,
     title: "Projeto Conscientiza",
-    description: "Ações de conscientização sobre a vida e a nossa missão",
+    description: "A força da oratória motivacional. Desenvolvendo e despertando consciências para um novo caminhar.",
     images: loadGallery("conscientiza"),
     idealizado: "Idealizador: Vinícius Laerte"
   },
