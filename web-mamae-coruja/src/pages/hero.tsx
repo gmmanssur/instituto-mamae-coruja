@@ -94,7 +94,7 @@ export default function Hero(){
 
                         <img
                         alt="Mascote Mamãe Coruja"
-                        className="w-full h-full object-contain drop-shadow-2xl animate-[float_4s_ease-in-out_infinite]"
+                        className="w-full h-full object-contain drop-shadow-2xl z-[990] animate-[float_4s_ease-in-out_infinite]"
                         src={owl}/>
 
                         <div className="hidden sm:block absolute top-20 right-0 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/50">

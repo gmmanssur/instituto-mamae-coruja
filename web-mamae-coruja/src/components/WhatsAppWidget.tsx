@@ -45,7 +45,7 @@ export default function WhatsAppWidget() {
   return (
     <>
       {open && (
-        <div className="fixed bottom-24 right-6 w-[320px] max-w-[92vw] bg-white rounded-2xl shadow-2xl z-[1000] overflow-hidden animate-[chatIn_.35s_ease]">
+        <div className="fixed bottom-24 right-6 w-[320px] max-w-[92vw] bg-white rounded-2xl shadow-2xl z-[999] overflow-hidden animate-[chatIn_.35s_ease]">
 
           <div className="bg-green-500 text-white p-4 flex justify-between items-center">
             <div>
@@ -115,6 +115,7 @@ export default function WhatsAppWidget() {
         className={`
         fixed bottom-6 right-6
         w-14 h-14
+        z-[999]
         rounded-full
         bg-green-500
         shadow-2xl
