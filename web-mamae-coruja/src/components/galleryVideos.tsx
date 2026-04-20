@@ -51,7 +51,9 @@ export function GalleryVideos() {
 
   return (
     <section className="mt-20">
-
+      <h1 className="text-[35px] font-bold text-[#5d9a94] leading-tight p-10">
+        Galeria de Vídeos
+      </h1>
       <div className="flex items-center justify-center gap-5">
 
         {/* LEFT */}
