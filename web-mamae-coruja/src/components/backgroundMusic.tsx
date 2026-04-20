@@ -95,33 +95,33 @@ export function BackgroundMusic() {
         preload="auto"
       />
 
-      <div className="fixed bottom-6 left-4 z-50 flex items-center gap-3">
+      <div className="fixed bottom-2 left-2 sm:bottom-6 sm:left-4 z-50 flex items-center gap-2 sm:gap-3 scale-90 sm:scale-100 origin-bottom-left">
         
         {/* voltar */}
         <button
           onClick={previousTrack}
-          className="bg-white/90 backdrop-blur-md shadow-xl rounded-full p-4 hover:scale-110 transition-all duration-300"
+          className="bg-white/90 backdrop-blur-md shadow-xl rounded-full p-2 sm:p-4 hover:scale-110 transition-all duration-300"
           aria-label="Música anterior"
         >
-          <SkipBack size={22} />
+          <SkipBack className="w-4 h-4 sm:w-6 sm:h-6" />
         </button>
 
         {/* play / pause */}
         <button
           onClick={togglePlay}
-          className="bg-white/90 backdrop-blur-md shadow-xl rounded-full p-4 hover:scale-110 transition-all duration-300"
+          className="bg-white/90 backdrop-blur-md shadow-xl rounded-full p-2 sm:p-4 hover:scale-110 transition-all duration-300"
           aria-label="Controlar música ambiente"
         >
-          {playing ? <Pause size={22} /> : <Play size={22} />}
+          {playing ? <Pause className="w-4 h-4 sm:w-6 sm:h-6" /> : <Play className="w-4 h-4 sm:w-6 sm:h-6" />}
         </button>
 
         {/* avançar */}
         <button
           onClick={nextTrack}
-          className="bg-white/90 backdrop-blur-md shadow-xl rounded-full p-4 hover:scale-110 transition-all duration-300"
+          className="bg-white/90 backdrop-blur-md shadow-xl rounded-full p-2 sm:p-4 hover:scale-110 transition-all duration-300"
           aria-label="Próxima música"
         >
-          <SkipForward size={22} />
+          <SkipForward className="w-4 h-4 sm:w-6 sm:h-6"/>
         </button>
       </div>
     </>
