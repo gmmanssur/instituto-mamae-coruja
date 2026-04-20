@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Volume2, Pause, Play } from "lucide-react";
+import { SkipBack, Pause, Play, SkipForward } from "lucide-react";
 
 /*
 Vite + React
@@ -38,7 +38,6 @@ export function BackgroundMusic() {
         await audio.play();
         setPlaying(true);
       } catch {
-        /* navegador pode bloquear autoplay */
         setPlaying(false);
       }
     };
@@ -61,6 +60,12 @@ export function BackgroundMusic() {
   function nextTrack() {
     setCurrentIndex((prev) =>
       prev + 1 >= playlist.length ? 0 : prev + 1
+    );
+  }
+
+  function previousTrack() {
+    setCurrentIndex((prev) =>
+      prev - 1 < 0 ? playlist.length - 1 : prev - 1
     );
   }
 
@@ -91,11 +96,15 @@ export function BackgroundMusic() {
       />
 
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3">
-
-        {/* volume ativo */}
-        <div className="bg-white/90 backdrop-blur-md shadow-xl rounded-full p-4">
-          <Volume2 size={22} />
-        </div>
+        
+        {/* voltar */}
+        <button
+          onClick={previousTrack}
+          className="bg-white/90 backdrop-blur-md shadow-xl rounded-full p-4 hover:scale-110 transition-all duration-300"
+          aria-label="Música anterior"
+        >
+          <SkipBack size={22} />
+        </button>
 
         {/* play / pause */}
         <button
@@ -106,6 +115,14 @@ export function BackgroundMusic() {
           {playing ? <Pause size={22} /> : <Play size={22} />}
         </button>
 
+        {/* avançar */}
+        <button
+          onClick={nextTrack}
+          className="bg-white/90 backdrop-blur-md shadow-xl rounded-full p-4 hover:scale-110 transition-all duration-300"
+          aria-label="Próxima música"
+        >
+          <SkipForward size={22} />
+        </button>
       </div>
     </>
   );

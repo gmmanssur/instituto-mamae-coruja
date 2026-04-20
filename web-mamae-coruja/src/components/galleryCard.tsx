@@ -56,10 +56,10 @@ export function GalleryCard({
           {title}
         </h3>
 
-        <p className="text-xs text-gray-500 line-clamp-2 mt-1">
+        <p className="text-[9px] md:text-[10px] text-gray-500 line-clamp-2 mt-1">
           {description}
         </p>
-        <p className="text-xs text-[#8200db] line-clamp-2 mt-1">
+        <p className="text-[9px] md:text-[10px] text-[#8200db] line-clamp-2 mt-1">
           {idealizado}
         </p>
       </div>
