@@ -7,6 +7,7 @@ import gpLogo from "../assets/sponsor/galinapires.jpeg";
 import carvalhoLogo from "../assets/sponsor/carvalho.jpeg"; 
 import sgLogo from "../assets/sponsor/sg.jpeg";
 import rochaToolsLogo from "../assets/sponsor/rochatools.png";
+import gmTruck from "../assets/sponsor/gmtruck.png";
 
 export default function Sponsor() { 
   const [hovered, setHovered] = useState<number | null>(null);
@@ -21,7 +22,8 @@ export default function Sponsor() {
     { src: gpLogo, name: "Galina Pires" },
     { src: carvalhoLogo, name: "Carvalho" },
     { src: sgLogo, name: "SG" },
-    { src: rochaToolsLogo, name: "Rocha Tools" }
+    { src: rochaToolsLogo, name: "Rocha Tools" },
+    { src: gmTruck, name: "GM Truck" },
   ];
 
   const looped = [...sponsors, ...sponsors];

@@ -6,7 +6,6 @@ import video2 from "../assets/gallery/videos/2.mp4";
 import video3 from "../assets/gallery/videos/3.mp4";
 import video4 from "../assets/gallery/videos/4.mp4";
 import video5 from "../assets/gallery/videos/5.mp4";
-import video6 from "../assets/gallery/videos/6.mp4";
 
 const videoData = [
   { id: 1, src: video1 },
@@ -14,7 +13,6 @@ const videoData = [
   { id: 3, src: video3 },
   { id: 4, src: video4 },
   { id: 5, src: video5 },
-  { id: 6, src: video6 },
 ];
 
 export function GalleryVideos() {
